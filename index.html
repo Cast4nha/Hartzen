@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartzen | Transformação B2B</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Navbar com efeito de glass morphism -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-glass">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h1 class="logo">Hartzen</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section com animação de parallax -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold">Transformação B2B</h1>
+                    <p class="lead">Excelência em publicidade digital e soluções cloud.</p>
+                    <button class="btn btn-primary btn-lg">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Nossos Serviços</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-megaphone-fill"></i>
+                        </div>
+                        <h3>Marketing Digital</h3>
+                        <p>Estratégias personalizadas para aumentar sua presença online e gerar resultados.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-cloud-fill"></i>
+                        </div>
+                        <h3>Soluções Cloud</h3>
+                        <p>Infraestrutura escalável e segura para sua empresa crescer sem limites.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h3>Transformação Digital</h3>
+                        <p>Modernização de processos e implementação de tecnologias inovadoras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="mb-4">Sobre a Hartzen</h2>
+                    <p class="lead">Somos especialistas em transformação digital B2B, ajudando empresas a alcançarem seu potencial máximo no mundo digital.</p>
+                    <div class="stats-wrapper mt-4">
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <h3 class="counter">500+</h3>
+                                    <p>Clientes Satisfeitos</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="stat-item">
+                                    <h3 class="counter">98%</h3>
+                                    <p>Taxa de Sucesso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="path/to/about-image.jpg" alt="Sobre a Hartzen" class="img-fluid rounded-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Parceiros -->
+    <section id="parceiros" class="partners-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Nossos Parceiros</h2>
+            <div id="partnersCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="partners-row">
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner1.png" alt="Parceiro 1" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner2.png" alt="Parceiro 2" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner3.png" alt="Parceiro 3" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner4.png" alt="Parceiro 4" class="partner-logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="partners-row">
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner5.png" alt="Parceiro 5" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner6.png" alt="Parceiro 6" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner7.png" alt="Parceiro 7" class="partner-logo">
+                            </div>
+                            <div class="partner-logo-wrapper">
+                                <img src="path/to/partner8.png" alt="Parceiro 8" class="partner-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#partnersCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#partnersCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Atualizado -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="text-white mb-4">Hartzen</h3>
+                    <p class="text-white-50">Transformação digital B2B com excelência em publicidade digital e soluções cloud.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="text-white mb-4">Entre em Contato</h4>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <p class="mb-2">São Paulo, SP - Brasil</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="bi bi-envelope"></i>
+                            <p class="mb-2">contato@hartzen.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="bi bi-telephone"></i>
+                            <p class="mb-2">+55 (11) 9999-9999</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-white mb-4">Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <hr class="border-light">
+                    <p class="text-white-50 text-center mb-0">&copy; 2024 Hartzen. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</html>
