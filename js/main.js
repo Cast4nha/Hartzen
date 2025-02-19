@@ -25,4 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-}); 
+
+    setupPartnersCarousel();
+});
+
+// Partners Carousel - Simplified version
+function setupPartnersCarousel() {
+    const track = document.querySelector('.partners-track');
+    const originalItems = track.innerHTML;
+    
+    // Duplicate items for infinite scroll effect
+    track.innerHTML = originalItems + originalItems;
+} 
