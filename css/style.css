@@ -1,9 +1,9 @@
 /* Remover todo o código relacionado ao theme switcher */
-/* Navbar atualizada - mais transparente */
+/* Navbar atualizada - mais transparente e muito mais compacta */
 .navbar {
     background: rgba(26, 26, 26, 0.7);
     backdrop-filter: blur(10px);
-    padding: 0.8rem 0;
+    padding: 0.1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -22,7 +22,7 @@
     color: #ffffff !important;
     font-weight: 400;
     font-size: 0.95rem;
-    padding: 0.5rem 1rem !important;
+    padding: 0.3rem 1rem !important;
     margin: 0 0.2rem;
     position: relative;
     transition: all 0.3s ease;
@@ -466,10 +466,11 @@
     z-index: 2;
 }
 
-/* Estilo para a logo da navbar */
+/* Estilo para a logo da navbar - ajustado para navbar compacta */
 .navbar-logo {
-    height: 40px;
+    height: 150px; /* Mantém o tamanho aumentado */
     width: auto;
     display: block;
+    margin: -25px 0; /* Ajuste negativo para compensar a navbar menor */
 }
 
