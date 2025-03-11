@@ -468,9 +468,9 @@
 
 /* Estilo para a logo da navbar - ajustado para navbar compacta */
 .navbar-logo {
-    height: 150px; /* Mantém o tamanho aumentado */
+    height: 180px; /* Mantém o tamanho aumentado */
     width: auto;
     display: block;
-    margin: -25px 0; /* Ajuste negativo para compensar a navbar menor */
+    margin: -45px 0; /* Ajuste negativo para compensar a navbar menor */
 }
 
