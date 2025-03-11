@@ -1,7 +1,7 @@
 /* Remover todo o código relacionado ao theme switcher */
-/* Navbar atualizada */
+/* Navbar atualizada - mais transparente */
 .navbar {
-    background: rgba(26, 26, 26, 0.95);
+    background: rgba(26, 26, 26, 0.7);
     backdrop-filter: blur(10px);
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -464,5 +464,12 @@
 .section-content {
     position: relative;
     z-index: 2;
+}
+
+/* Estilo para a logo da navbar */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
