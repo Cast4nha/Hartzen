@@ -267,7 +267,7 @@
     margin-right: 1rem;
 }
 
-/* Partners Section */
+/* Partners Section - Versão com animação verdadeiramente contínua */
 .partners-section {
     padding: 4rem 0;
     background-color: #f5f5f5;
@@ -277,12 +277,13 @@
 .partners-carousel {
     width: 100%;
     position: relative;
+    overflow: hidden; /* Importante para esconder o salto */
 }
 
 .partners-track {
     display: flex;
-    animation: scroll 30s linear infinite;
-    width: calc(200px * 16); /* Duplicamos os itens para criar o efeito infinito */
+    width: max-content; /* Permite que o conteúdo determine a largura */
+    animation: none; /* Removemos a animação CSS e usaremos JS */
 }
 
 .partner-logo-wrapper {
@@ -306,30 +307,7 @@
     transform: scale(1.05);
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-200px * 8)); /* Metade dos itens */
-    }
-}
-
-.partners-track:hover {
-    animation-play-state: paused;
-}
-
-/* Ajuste responsivo para parceiros */
-@media (max-width: 768px) {
-    .partners-section {
-        padding: 3rem 0;
-    }
-    
-    .partner-logo {
-        max-width: 120px;
-        max-height: 50px;
-    }
-}
+/* Removemos a animação CSS e a implementaremos via JS */
 
 /* Hero Section com ícones flutuantes */
 .hero-section {
