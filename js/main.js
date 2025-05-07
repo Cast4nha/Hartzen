@@ -1,88 +1,92 @@
-// Inicializa as animações AOS
-AOS.init({
-    duration: 1000,
-    once: true
-});
-
-// Adiciona classe active ao link da navbar ao scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 60) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
         });
     });
 
-    setupPartnersCarousel();
-});
+    // Validação do formulário de contato
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = this.querySelector('[name="name"]');
+            const email = this.querySelector('[name="email"]');
+            const message = this.querySelector('[name="message"]');
+            let isValid = true;
 
-// Partners Carousel - Implementação verdadeiramente contínua
-function setupPartnersCarousel() {
-    const track = document.querySelector('.partners-track');
-    const originalItems = track.innerHTML;
-    
-    // Duplicar os itens para o efeito infinito
-    track.innerHTML = originalItems + originalItems;
-    
-    // Obter a largura de um único conjunto de itens
-    const itemWidth = track.scrollWidth / 2;
-    
-    // Posição inicial
-    let position = 0;
-    
-    // Velocidade da animação (pixels por segundo)
-    const speed = 40;
-    
-    // Timestamp da última atualização
-    let lastTimestamp = 0;
-    
-    // Função de animação
-    function animate(timestamp) {
-        if (!lastTimestamp) lastTimestamp = timestamp;
-        
-        // Calcular o tempo decorrido desde a última atualização
-        const elapsed = timestamp - lastTimestamp;
-        
-        // Atualizar a posição com base no tempo decorrido e na velocidade
-        position -= (speed * elapsed) / 1000;
-        
-        // Se a posição ultrapassar a largura de um conjunto de itens, resetar
-        if (Math.abs(position) >= itemWidth) {
-            position = 0;
-        }
-        
-        // Aplicar a transformação
-        track.style.transform = `translateX(${position}px)`;
-        
-        // Atualizar o timestamp
-        lastTimestamp = timestamp;
-        
-        // Continuar a animação
-        requestAnimationFrame(animate);
+            // Validação básica
+            if (!name.value.trim()) {
+                showError(name, 'Por favor, insira seu nome');
+                isValid = false;
+            } else {
+                removeError(name);
+            }
+
+            if (!email.value.trim()) {
+                showError(email, 'Por favor, insira seu email');
+                isValid = false;
+            } else if (!isValidEmail(email.value)) {
+                showError(email, 'Por favor, insira um email válido');
+                isValid = false;
+            } else {
+                removeError(email);
+            }
+
+            if (!message.value.trim()) {
+                showError(message, 'Por favor, insira sua mensagem');
+                isValid = false;
+            } else {
+                removeError(message);
+            }
+
+            if (isValid) {
+                this.submit();
+            }
+        });
     }
-    
-    // Iniciar a animação
-    requestAnimationFrame(animate);
-    
-    // Pausar a animação quando o mouse estiver sobre o carrossel
-    track.addEventListener('mouseenter', () => {
-        track.style.animationPlayState = 'paused';
-    });
-    
-    track.addEventListener('mouseleave', () => {
-        track.style.animationPlayState = 'running';
-    });
-} 
+});
+
+// Funções auxiliares
+function showError(input, message) {
+    const formGroup = input.closest('.form-group');
+    const error = formGroup.querySelector('.error-message') || document.createElement('div');
+    error.className = 'error-message';
+    error.textContent = message;
+    if (!formGroup.querySelector('.error-message')) {
+        formGroup.appendChild(error);
+    }
+    input.classList.add('error');
+}
+
+function removeError(input) {
+    const formGroup = input.closest('.form-group');
+    const error = formGroup.querySelector('.error-message');
+    if (error) {
+        error.remove();
+    }
+    input.classList.remove('error');
+}
+
+function isValidEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+// Animação de scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('header--scrolled');
+    } else {
+        header.classList.remove('header--scrolled');
+    }
+}); 
