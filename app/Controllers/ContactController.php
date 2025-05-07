@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Controllers;
 
 use App\Core\Controller;
@@ -9,7 +7,10 @@ use App\Core\Request;
 
 class ContactController extends Controller
 {
-    public function index(): void
+    /**
+     * @return void
+     */
+    public function index()
     {
         $this->render('contact', [
             'title' => 'Contato | ' . $this->config['site']['name'],
@@ -18,7 +19,10 @@ class ContactController extends Controller
         ]);
     }
 
-    public function send(): void
+    /**
+     * @return void
+     */
+    public function send()
     {
         $request = new Request();
         

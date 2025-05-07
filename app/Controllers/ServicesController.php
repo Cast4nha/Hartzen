@@ -1,14 +1,15 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Controllers;
 
 use App\Core\Controller;
 
 class ServicesController extends Controller
 {
-    public function index(): void
+    /**
+     * @return void
+     */
+    public function index()
     {
         $services = require APP_PATH . '/Models/services_data.php';
         

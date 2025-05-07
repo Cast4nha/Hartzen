@@ -1,14 +1,15 @@
 <?php
 
-declare(strict_types=1);
-
 namespace App\Controllers;
 
 use App\Core\Controller;
 
 class AboutController extends Controller
 {
-    public function index(): void
+    /**
+     * @return void
+     */
+    public function index()
     {
         $this->render('about', [
             'title' => 'Sobre | ' . $this->config['site']['name'],

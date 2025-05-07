@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Animação da navbar no scroll
+    const header = document.querySelector('.header');
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Checa o estado inicial
+
+    // // Reinicia a animação de digitação quando voltar ao topo
+    // const subtitle = document.querySelector('.hero-section__subtitle');
+    // if (subtitle) {
+    //     window.addEventListener('scroll', () => {
+    //         if (window.scrollY === 0) {
+    //             subtitle.classList.remove('typing');
+    //             void subtitle.offsetWidth; // Força o reflow
+    //             subtitle.classList.add('typing');
+    //         }
+    //     });
+    // }
+
     // Smooth scrolling para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -79,14 +103,4 @@ function removeError(input) {
 function isValidEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
-}
-
-// Animação de scroll
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
-    }
-}); 
+} 

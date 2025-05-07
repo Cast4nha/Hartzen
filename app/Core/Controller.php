@@ -47,13 +47,13 @@ abstract class Controller
     }
 
     /**
+     * Gera um token CSRF seguro usando openssl_random_pseudo_bytes
      * @return string
      */
     protected function generateCsrfToken()
     {
-        $token = bin2hex(random_bytes(32));
-        $_SESSION['csrf_token'] = $token;
-        return $token;
+        $bytes = openssl_random_pseudo_bytes(32);
+        return bin2hex($bytes);
     }
 
     /**

@@ -1,13 +1,20 @@
-<section class="hero">
-    <div class="hero__content">
-        <h1 class="hero__title"><?= htmlspecialchars($title) ?></h1>
-        <p class="hero__description"><?= htmlspecialchars($description) ?></p>
-        <a href="/servicos" class="hero__cta">Descubra Nossas Soluções</a>
+<section class="hero-section">
+    <div class="hero-section__content">
+        <div class="hero-section__title">
+            <h3 class="hero-section__subtitle typing">Hartzen é transformação</h3>
+            <h1 class="hero-section__heading">transformação é resultado</h1>
+            <p class="hero-section__description">Desde 2012 impulsionando a transformação digital B2B com soluções inovadoras</p>
+        </div>
+        <div class="hero-section__actions">
+            <a href="/sobre" class="hero-section__link">Cases de Sucesso</a>
+            <a href="/contato" class="hero-section__button"><span>Contrate a Hartzen</span></a>
+            <a href="https://www.linkedin.com/company/hartzen" target="_blank" rel="noopener noreferrer" class="hero-section__link">Trabalhe Conosco</a>
+        </div>
     </div>
 </section>
 
 <section class="services">
-    <h2 class="services__title">Nossos Serviços</h2>
+    <h2 class="services__title">Soluções que Transformam</h2>
     <div class="services__grid">
         <div class="services__item">
             <div class="services__icon">
@@ -35,7 +42,7 @@
 
 <section class="about">
     <div class="about__content">
-        <h2 class="about__title">Por que escolher a Hartzen?</h2>
+        <h2 class="about__title">Por que a Hartzen?</h2>
         <div class="about__grid">
             <div class="about__item">
                 <h3 class="about__item-title">Experiência B2B</h3>
@@ -55,8 +62,8 @@
 
 <section class="cta">
     <div class="cta__content">
-        <h2 class="cta__title">Pronto para transformar seu negócio?</h2>
-        <p class="cta__description">Entre em contato conosco e descubra como podemos ajudar sua empresa.</p>
-        <a href="/contato" class="cta__button">Fale Conosco</a>
+        <h2 class="cta__title">Pronto para Transformar?</h2>
+        <p class="cta__description">Entre em contato e descubra como podemos impulsionar seu negócio no mundo digital.</p>
+        <a href="/contato" class="cta__button">Fale com um Especialista</a>
     </div>
 </section> 
